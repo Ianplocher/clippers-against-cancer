@@ -1,0 +1,576 @@
+<title>Clippers Against Cancer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Clippers Against Cancer is a nonprofit dedicated to supporting cancer patients and their families through community-driven fundraising and awareness events.">
+<meta name="keywords" content="Clippers Against Cancer, cancer charity, cancer fundraising, cancer awareness, donate to cancer charity, hair clipping fundraiser">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Clippers Against Cancer">
+<meta property="og:description" content="Providing Chemo Care Baskets and compassionate chemo haircuts to cancer patients in hospitals and infusion centers. Founded by Kate Asbury.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap">
+
+<style>
+/* Clippers Against Cancer — pink ribbon + charcoal from logo */
+:root {
+  --bg: #FDFBFC;
+  --bg-alt: #F5EEF0;
+  --fg: #2D2D2D;
+  --fg-muted: #6B6269;
+  --accent: #D4849A;
+  --accent-light: #E8A0B4;
+  --warm: #C97088;
+  --warm-light: #D4849A;
+  --border: #E2D8DB;
+  --card-bg: #FFFFFF;
+  --donate-bg: #1C1A1B;
+  --font-display: 'DM Serif Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #151214;
+    --bg-alt: #1E1A1C;
+    --fg: #EAE5E7;
+    --fg-muted: #9E9497;
+    --accent: #E8A0B4;
+    --accent-light: #F0B8C8;
+    --warm: #E8A0B4;
+    --warm-light: #F0B8C8;
+    --border: #302A2D;
+    --card-bg: #201C1E;
+    --donate-bg: #0E0C0D;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #151214;
+  --bg-alt: #1E1A1C;
+  --fg: #EAE5E7;
+  --fg-muted: #9E9497;
+  --accent: #E8A0B4;
+  --accent-light: #F0B8C8;
+  --warm: #E8A0B4;
+  --warm-light: #F0B8C8;
+  --border: #302A2D;
+  --card-bg: #201C1E;
+  --donate-bg: #0E0C0D;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--bg);
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Nav */
+nav {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 9;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--fg);
+}
+.nav-logo-img {
+  height: 44px;
+  width: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.nav-logo span {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--fg); }
+.nav-donate-btn {
+  background: var(--warm);
+  color: #fff !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.nav-donate-btn:hover { background: var(--warm-light); }
+
+/* Hero */
+.hero {
+  padding: 5rem 0 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('logo.jpg') center center / contain no-repeat;
+  opacity: 0.06;
+  pointer-events: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero::before { opacity: 0.12; }
+}
+:root[data-theme="dark"] .hero::before { opacity: 0.12; }
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-wrap: balance;
+}
+.hero h1 .highlight {
+  color: var(--warm);
+}
+.hero-sub {
+  font-size: 1.125rem;
+  color: var(--fg-muted);
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
+  text-wrap: balance;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--warm);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: background 0.2s, transform 0.15s;
+  border: none;
+  cursor: pointer;
+}
+.hero-cta:hover { background: var(--warm-light); transform: translateY(-1px); }
+.hero-cta svg { width: 18px; height: 18px; }
+
+/* Section shared */
+section { padding: 4rem 0; }
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  text-wrap: balance;
+}
+
+/* Mission */
+.mission {
+  background: var(--bg-alt);
+  border-radius: 16px;
+  padding: 3.5rem 2.5rem;
+  margin: 0 auto;
+  max-width: 960px;
+}
+.mission-text {
+  font-size: 1.125rem;
+  color: var(--fg-muted);
+  max-width: 680px;
+  line-height: 1.75;
+}
+.mission-placeholder {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+  max-width: 680px;
+}
+
+/* Photos / Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.gallery-item {
+  aspect-ratio: 4/3;
+  background: var(--bg-alt);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: 2px dashed var(--border);
+  color: var(--fg-muted);
+  font-size: 0.85rem;
+  overflow: hidden;
+}
+.gallery-item svg {
+  width: 36px;
+  height: 36px;
+  opacity: 0.4;
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Impact numbers */
+.impact-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.impact-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+}
+.impact-number {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  color: var(--warm);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  font-variant-numeric: tabular-nums;
+}
+.impact-label {
+  font-size: 0.875rem;
+  color: var(--fg-muted);
+  font-weight: 500;
+}
+
+/* Donate section */
+.donate-section {
+  background: var(--donate-bg);
+  border-radius: 16px;
+  padding: 3.5rem 2.5rem;
+  text-align: center;
+  color: #fff;
+}
+.donate-section .section-label { color: rgba(255,255,255,0.65); }
+.donate-section .section-heading { color: #fff; }
+.donate-section p { color: rgba(255,255,255,0.8); max-width: 520px; margin: 0 auto 2rem; }
+.donate-amounts {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+.amount-btn {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.25);
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  font-family: var(--font-body);
+}
+.amount-btn:hover, .amount-btn.active {
+  background: rgba(255,255,255,0.25);
+  border-color: rgba(255,255,255,0.5);
+}
+.donate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  font-family: var(--font-body);
+}
+.donate-btn:hover { background: var(--accent-light); transform: translateY(-1px); }
+.donate-note {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+/* Contact / Footer */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.contact-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--bg-alt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.contact-icon svg { width: 18px; height: 18px; color: var(--accent); }
+.contact-item h4 { font-size: 0.875rem; font-weight: 600; margin-bottom: 0.25rem; }
+.contact-item p { font-size: 0.875rem; color: var(--fg-muted); }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+}
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Scroll smooth */
+html { scroll-behavior: smooth; }
+
+@media (max-width: 600px) {
+  .hero { padding: 3rem 0 2.5rem; }
+  .mission, .donate-section { padding: 2.5rem 1.5rem; }
+  section { padding: 3rem 0; }
+  .nav-links { gap: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+
+<!-- Structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Clippers Against Cancer",
+  "description": "Providing Chemo Care Baskets and compassionate chemo haircuts to cancer patients in hospitals and infusion centers. Founded by Kate Asbury.",
+  "founder": {"@type": "Person", "name": "Kate Asbury"},
+  "url": "",
+  "logo": "",
+  "sameAs": []
+}
+</script>
+
+<nav aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Clippers Against Cancer home">
+      <img src="logo.jpg" alt="Clippers Against Cancer" class="nav-logo-img">
+      <span>Clippers Against Cancer</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#donate" class="nav-donate-btn">Donate</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="wrapper">
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <h1>Every Clip Counts in the <span class="highlight">Fight Against Cancer</span></h1>
+      <p class="hero-sub">Providing Chemo Care Baskets and compassionate chemo haircuts to cancer patients in hospitals and infusion centers.</p>
+      <a href="#donate" class="hero-cta">
+        Make a Donation
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg>
+      </a>
+    </section>
+
+    <!-- Mission Statement -->
+    <section id="mission">
+      <div class="mission">
+        <p class="section-label">Our Mission</p>
+        <h2 class="section-heading">Why We Clip</h2>
+        <p class="mission-text">In 2015, my best friend was diagnosed with triple negative breast cancer. When her hair started falling out she asked me to help her with her chemo haircut. Being the amazing mom she was, she wanted to make it a fun experience to share with her girls. We cut many different styles and laughed about them as her hair got shorter and shorter. She looked amazing in a mohawk!</p>
+        <p class="mission-text" style="margin-top: 1rem;">Fast forward to 2019 and I found my mom on her own journey to beat Lymphoblastic Leukemia. When her hair started to fall out, a haircut was not something the hospital would help her with. She was constantly in her hospital bed which made her hair knotted and painful. I helped her with her first chemo haircut and the idea of Clippers Against Cancer was born.</p>
+        <p class="mission-text" style="margin-top: 1rem;"><strong>Our mission is to provide relief to those fighting for their lives within our local community.</strong> Our first goal is to provide Chemo Care Baskets to patients in hospitals and infusion centers. During these visits we also offer chemo haircuts for those losing their hair for the first time.</p>
+        <p class="mission-text" style="margin-top: 1.5rem; font-style: italic; color: var(--fg-muted);">&mdash; Kate Asbury, Founder</p>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery">
+      <p class="section-label">Our Community</p>
+      <h2 class="section-heading">See Us in Action</h2>
+      <p style="color: var(--fg-muted); max-width: 520px;">Photos from our events, fundraisers, and the communities we serve.</p>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="photo1.jpg" alt="A mother with a fresh chemo haircut, embraced by her two daughters" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo2.jpg" alt="Kate Asbury delivering Chemo Care Baskets to a hospital" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo3.jpg" alt="The Clippers Against Cancer team with hospital staff holding care bags" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo4.jpg" alt="A young volunteer carrying a box of care baskets at the Center for Cancer Care" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo5.jpg" alt="Clippers Against Cancer tote bags being packed for delivery" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo6.jpg" alt="Delivering a wheelchair full of Chemo Care Baskets to a hospital" loading="lazy"></div>
+        <div class="gallery-item"><img src="photo7.jpg" alt="Care basket delivery at City of Hope with hospital staff" loading="lazy"></div>
+      </div>
+    </section>
+
+    <!-- Donate -->
+    <section id="donate">
+      <div class="donate-section">
+        <p class="section-label">Support the Cause</p>
+        <h2 class="section-heading">Your Donation Makes a Difference</h2>
+        <p>Every dollar goes directly to supporting cancer patients and their families. Choose an amount or enter your own.</p>
+        <div class="donate-amounts">
+          <button class="amount-btn" data-amount="25" type="button">$25</button>
+          <button class="amount-btn active" data-amount="50" type="button">$50</button>
+          <button class="amount-btn" data-amount="100" type="button">$100</button>
+          <button class="amount-btn" data-amount="250" type="button">$250</button>
+        </div>
+        <button class="donate-btn" id="donateBtn" type="button">
+          Donate Now
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+        </button>
+        <p class="donate-note">Stripe payment link coming soon. Secure, tax-deductible donations.</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-heading">Join the Fight</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/></svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p>Clippersagainstcancer@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>
+          </div>
+          <div>
+            <h4>Location</h4>
+            <p>Redlands, California</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5a17.92 17.92 0 0 1-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+          </div>
+          <div>
+            <h4>Instagram</h4>
+            <p>@clippersagainstcancerie</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrapper">
+    <p>&copy; 2024 Clippers Against Cancer. All rights reserved.</p>
+    <p>A 501(c)(3) nonprofit organization. All donations are tax-deductible.</p>
+  </div>
+</footer>
+
+<script>
+(function() {
+  var selectedAmount = 50;
+  var buttons = document.querySelectorAll('.amount-btn');
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      selectedAmount = parseInt(btn.getAttribute('data-amount'), 10);
+    });
+  });
+
+  document.getElementById('donateBtn').addEventListener('click', function() {
+    // Replace this URL with your Stripe payment link when ready
+    // window.location.href = 'https://donate.stripe.com/your-link-here';
+    var note = document.querySelector('.donate-note');
+    note.textContent = 'Stripe payment link will be connected soon. Thank you for your interest in donating $' + selectedAmount + '!';
+    note.style.color = 'rgba(255,255,255,0.8)';
+  });
+})();
+</script>
