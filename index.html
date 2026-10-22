@@ -212,6 +212,7 @@ section { padding: 4rem 0; }
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 0.75rem;
+  text-align: center;
 }
 .section-heading {
   font-family: var(--font-display);
@@ -219,6 +220,7 @@ section { padding: 4rem 0; }
   line-height: 1.2;
   margin-bottom: 1.25rem;
   text-wrap: balance;
+  text-align: center;
 }
 
 /* Mission */
@@ -234,6 +236,9 @@ section { padding: 4rem 0; }
   color: var(--fg-muted);
   max-width: 680px;
   line-height: 1.75;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 .mission-placeholder {
   margin-top: 1.5rem;
@@ -366,16 +371,20 @@ section { padding: 4rem 0; }
 
 /* Contact / Footer */
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
 }
 .contact-item {
   display: flex;
-  gap: 1rem;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 180px;
 }
+.contact-item div { text-align: center; }
 .contact-icon {
   width: 40px;
   height: 40px;
@@ -474,10 +483,10 @@ html { scroll-behavior: smooth; }
     </section>
 
     <!-- Photo Gallery -->
-    <section id="gallery">
+    <section id="gallery" style="text-align: center;">
       <p class="section-label">Our Community</p>
       <h2 class="section-heading">See Us in Action</h2>
-      <p style="color: var(--fg-muted); max-width: 520px;">Photos from our events, fundraisers, and the communities we serve.</p>
+      <p style="color: var(--fg-muted); max-width: 520px; margin: 0 auto; text-align: center;">Photos from our events, fundraisers, and the communities we serve.</p>
       <div class="gallery-grid">
         <div class="gallery-item"><img src="photo1.jpg" alt="A mother with a fresh chemo haircut, embraced by her two daughters" loading="lazy"></div>
         <div class="gallery-item"><img src="photo2.jpg" alt="Kate Asbury delivering Chemo Care Baskets to a hospital" loading="lazy"></div>
@@ -510,7 +519,7 @@ html { scroll-behavior: smooth; }
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" style="text-align: center;">
       <p class="section-label">Get in Touch</p>
       <h2 class="section-heading">Join the Fight</h2>
       <div class="contact-grid">
