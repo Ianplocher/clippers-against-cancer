@@ -150,16 +150,21 @@ nav {
 
 /* Hero */
 .hero {
-  padding: 5rem 0 4rem;
+  padding: 6rem 2rem 5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  background: var(--bg-alt);
+  margin-left: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  margin-right: calc(-1 * max(16px, env(safe-area-inset-right, 0px)));
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
 }
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('logo.jpg') center center / contain no-repeat;
+  background: url('logo.jpg') center center / 500px no-repeat;
   opacity: 0.06;
   pointer-events: none;
 }
@@ -460,6 +465,7 @@ html { scroll-behavior: smooth; }
 
 <main>
   <div class="wrapper">
+  </div>
     <!-- Hero -->
     <section class="hero" id="home">
       <h1>Every Clip Counts in the <span class="highlight">Fight Against Cancer</span></h1>
@@ -470,6 +476,7 @@ html { scroll-behavior: smooth; }
       </a>
     </section>
 
+  <div class="wrapper">
     <!-- Mission Statement -->
     <section id="mission">
       <div class="mission">
